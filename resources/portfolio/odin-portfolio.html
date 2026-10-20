@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--
+    Source for public/downloads/odin-portfolio.pdf (sample content — replace it in Admin → IT Services).
+    To rebuild the PDF from this file:
+    "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --no-pdf-header-footer --print-to-pdf=public\downloads\odin-portfolio.pdf resources\portfolio\odin-portfolio.html
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Odin.lk - IT Services Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --red: #e10600; --red-dark: #b30500; --blue: #0a3d91; --black: #0b0b0f; --ink: #1d2230; --muted: #6b7280; --line: #e6e9ef; --bg: #f4f6f9; }
+    body { margin: 0; font-family: 'Poppins', Arial, sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.55; }
+    .page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; padding: 20mm 18mm 22mm; }
+    .page:last-child { page-break-after: auto; }
+    h1, h2, h3, h4 { margin: 0; color: var(--black); line-height: 1.2; }
+    h2 { font-size: 24pt; font-weight: 800; margin-bottom: 4mm; }
+    h2 .accent { color: var(--red); }
+    .kicker { font-size: 8.5pt; font-weight: 700; letter-spacing: 3px; color: var(--red); text-transform: uppercase; margin-bottom: 2mm; }
+    .lead { font-size: 11.5pt; color: var(--muted); max-width: 150mm; }
+    .foot { position: absolute; left: 18mm; right: 18mm; bottom: 10mm; display: flex; justify-content: space-between; font-size: 8pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 3mm; }
+    .foot b { color: var(--red); }
+    .logo { display: flex; align-items: center; gap: 4mm; }
+    .logo .mark { width: 16mm; height: 16mm; border-radius: 4mm; background: linear-gradient(135deg, #ff1a1a, var(--red-dark)); position: relative; }
+    .logo .mark::before { content: ''; position: absolute; inset: 3.4mm; border-radius: 50%; border: 2.4mm solid #fff; }
+    .logo .mark::after { content: ''; position: absolute; left: 6.7mm; top: 6.7mm; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--black); }
+    .logo .word { font-weight: 800; font-size: 22pt; letter-spacing: .5px; }
+    .logo .word span { color: #6ea8ff; }
+    .logo small { display: block; font-size: 7pt; letter-spacing: 3px; font-weight: 700; color: var(--red); margin-top: 1mm; }
+
+    /* Cover */
+    .cover { background: radial-gradient(circle at 85% 18%, rgba(225, 6, 0, .45), transparent 42%), linear-gradient(140deg, var(--black) 0%, #0a2a66 58%, var(--blue) 100%); color: #fff; display: flex; flex-direction: column; justify-content: space-between; }
+    .cover .logo .word { color: #fff; }
+    .cover h1 { color: #fff; font-size: 40pt; font-weight: 800; line-height: 1.08; margin: 6mm 0; }
+    .cover h1 span { color: #ff6b66; }
+    .cover .sub { font-size: 13pt; opacity: .85; max-width: 140mm; }
+    .cover .pills { display: flex; flex-wrap: wrap; gap: 3mm; margin-top: 10mm; }
+    .cover .pills span { border: 1px solid rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .08); padding: 2mm 5mm; border-radius: 20mm; font-size: 9.5pt; }
+    .cover .ring { position: absolute; right: -40mm; bottom: -40mm; width: 140mm; height: 140mm; border-radius: 50%; border: 22mm solid rgba(225, 6, 0, .35); }
+    .cover .ring2 { position: absolute; right: 40mm; top: 90mm; width: 40mm; height: 40mm; border-radius: 50%; border: 6mm solid rgba(110, 168, 255, .25); }
+    .cover .meta { display: flex; justify-content: space-between; align-items: flex-end; font-size: 9.5pt; opacity: .85; position: relative; }
+    .cover .meta strong { display: block; font-size: 16pt; opacity: 1; }
+    .cover .sample { position: absolute; top: 20mm; right: 18mm; font-size: 8pt; border: 1px dashed rgba(255, 255, 255, .5); padding: 1.5mm 4mm; border-radius: 2mm; opacity: .8; }
+
+    /* Stats & cards */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin: 8mm 0; }
+    .stat { background: var(--bg); border-radius: 4mm; padding: 6mm 4mm; text-align: center; }
+    .stat b { display: block; font-size: 22pt; font-weight: 800; color: var(--red); line-height: 1.1; }
+    .stat span { font-size: 8.5pt; color: var(--muted); }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+    .box { border: 1px solid var(--line); border-radius: 4mm; padding: 6mm; }
+    .box h4 { font-size: 12pt; margin-bottom: 2mm; }
+    .box p { margin: 0; color: var(--muted); font-size: 9.5pt; }
+    .mission { background: linear-gradient(120deg, var(--black), var(--blue)); color: #fff; border-radius: 4mm; padding: 7mm 8mm; margin-top: 8mm; }
+    .mission h4 { color: #fff; font-size: 13pt; margin-bottom: 2mm; }
+    .mission p { margin: 0; opacity: .85; }
+
+    /* Services */
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 6mm; }
+    .svc { border: 1px solid var(--line); border-radius: 4mm; padding: 5.5mm; border-top: 1.5mm solid var(--red); }
+    .svc:nth-child(even) { border-top-color: var(--blue); }
+    .svc h3 { font-size: 13pt; margin-bottom: 1mm; }
+    .svc .tag { font-size: 8.5pt; color: var(--muted); margin-bottom: 3mm; }
+    .svc ul { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 4mm; font-size: 9pt; }
+    .svc li { padding: .6mm 0 .6mm 4mm; position: relative; break-inside: avoid; }
+    .svc li::before { content: ''; position: absolute; left: 0; top: 2.6mm; width: 1.6mm; height: 1.6mm; border-radius: 50%; background: var(--red); }
+    .svc .price { margin-top: 3mm; font-size: 9pt; font-weight: 600; color: var(--blue); }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 6mm; }
+    .project { border: 1px solid var(--line); border-radius: 4mm; overflow: hidden; }
+    .project .shot { height: 30mm; position: relative; background: linear-gradient(135deg, var(--c1), var(--c2)); }
+    .project .shot::before { content: ''; position: absolute; left: 8mm; right: 8mm; top: 6mm; bottom: -2mm; background: #fff; border-radius: 2mm 2mm 0 0; box-shadow: 0 2mm 6mm rgba(0, 0, 0, .25); }
+    .project .shot::after { content: ''; position: absolute; left: 12mm; right: 40mm; top: 11mm; height: 3mm; border-radius: 2mm; background: var(--c1); box-shadow: 0 6mm 0 -.5mm #e6e9ef, 0 11mm 0 -.5mm #e6e9ef, 30mm 6mm 0 -.5mm #e6e9ef; }
+    .project .body { padding: 4mm 5mm 5mm; }
+    .project .type { font-size: 7.5pt; font-weight: 700; letter-spacing: 1.5px; color: var(--red); text-transform: uppercase; }
+    .project h4 { font-size: 11pt; margin: 1mm 0 1.5mm; }
+    .project p { margin: 0; font-size: 8.8pt; color: var(--muted); }
+    .project .result { margin-top: 2mm; font-size: 8.8pt; font-weight: 600; color: #15803d; }
+
+    /* Process */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin: 6mm 0 10mm; }
+    .step { background: var(--bg); border-radius: 4mm; padding: 5mm; position: relative; }
+    .step b { font-size: 20pt; font-weight: 800; color: rgba(225, 6, 0, .35); }
+    .step h4 { font-size: 11pt; margin: 1mm 0; }
+    .step p { margin: 0; font-size: 8.8pt; color: var(--muted); }
+    .why { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 8mm; margin: 4mm 0 10mm; padding: 0; list-style: none; }
+    .why li { padding-left: 7mm; position: relative; }
+    .why li::before { content: '✓'; position: absolute; left: 0; top: 0; width: 5mm; height: 5mm; border-radius: 50%; background: var(--red); color: #fff; font-size: 8pt; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .tech { display: flex; flex-wrap: wrap; gap: 2.5mm; margin-top: 4mm; }
+    .tech span { background: var(--bg); border: 1px solid var(--line); border-radius: 20mm; padding: 1.5mm 4.5mm; font-size: 9pt; font-weight: 500; }
+
+    /* Contact */
+    .contact { background: linear-gradient(140deg, var(--black) 0%, #0a2a66 60%, var(--blue) 100%); color: #fff; display: flex; flex-direction: column; justify-content: center; }
+    .contact h2 { color: #fff; font-size: 32pt; }
+    .contact .lead { color: rgba(255, 255, 255, .8); }
+    .contact .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin: 12mm 0; }
+    .contact .card { background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .18); border-radius: 4mm; padding: 6mm; }
+    .contact .card span { display: block; font-size: 8.5pt; letter-spacing: 2px; text-transform: uppercase; color: #ff9d9a; margin-bottom: 1.5mm; }
+    .contact .card b { font-size: 13pt; }
+    .contact .cta { display: inline-block; background: var(--red); color: #fff; padding: 4mm 10mm; border-radius: 20mm; font-weight: 700; font-size: 12pt; }
+    .contact .ring { position: absolute; right: -50mm; top: -50mm; width: 150mm; height: 150mm; border-radius: 50%; border: 24mm solid rgba(225, 6, 0, .3); }
+    .contact .foot { color: rgba(255, 255, 255, .6); border-top-color: rgba(255, 255, 255, .2); }
+</style>
+</head>
+<body>
+
+<!-- 1. Cover -->
+<section class="page cover">
+    <div class="ring"></div><div class="ring2"></div>
+    <div class="sample">Sample portfolio &mdash; replace with your own</div>
+    <div class="logo">
+        <div class="mark"></div>
+        <div><div class="word">ODIN<span>.lk</span></div><small>TECHNOLOGY STORE &amp; IT SERVICES</small></div>
+    </div>
+    <div style="position: relative">
+        <div class="kicker" style="color: #ff9d9a">Company Portfolio 2026</div>
+        <h1>Technology that<br><span>grows</span> your business.</h1>
+        <p class="sub">Websites, ERP software, business management systems and IT support &mdash; designed, built and supported in Sri Lanka.</p>
+        <div class="pills"><span>Website Development</span><span>ERP Software</span><span>Business Systems</span><span>Installation &amp; Maintenance</span></div>
+    </div>
+    <div class="meta">
+        <div><strong>www.odin.lk</strong>support@odin.lk &middot; 011 234 5678</div>
+        <div style="text-align: right">No. 125, Galle Road<br>Colombo 03, Sri Lanka</div>
+    </div>
+</section>
+
+<!-- 2. About -->
+<section class="page">
+    <div class="kicker">About us</div>
+    <h2>Your technology partner <span class="accent">in Sri Lanka</span></h2>
+    <p class="lead">Odin.lk started as a technology store and grew into a full IT services company. Today we help shops, hotels, schools, factories and offices across the island run smarter with the right websites and software &mdash; explained in simple language and supported long after launch.</p>
+    <div class="stats">
+        <div class="stat"><b>150+</b><span>Projects delivered</span></div>
+        <div class="stat"><b>90+</b><span>Business clients</span></div>
+        <div class="stat"><b>8 yrs</b><span>In technology</span></div>
+        <div class="stat"><b>24/7</b><span>Support hotline</span></div>
+    </div>
+    <div class="two">
+        <div class="box"><h4>What we do</h4><p>We design and build websites, e-commerce stores, ERP and business management systems, and we install, update and back up the software your team uses every day.</p></div>
+        <div class="box"><h4>Who we work with</h4><p>Small and medium businesses, retail and wholesale shops, hotels and restaurants, clinics and pharmacies, schools and tuition classes, manufacturers and service companies.</p></div>
+        <div class="box"><h4>Local &amp; reachable</h4><p>A Colombo-based team that visits your office, speaks your language (Sinhala, Tamil, English) and answers the phone when you need help.</p></div>
+        <div class="box"><h4>Clear pricing</h4><p>Fixed quotations with no hidden costs, flexible payment plans and affordable monthly maintenance packages.</p></div>
+    </div>
+    <div class="mission">
+        <h4>Our mission</h4>
+        <p>To give every Sri Lankan business &mdash; big or small &mdash; access to reliable, affordable technology that saves time, reduces mistakes and helps them grow.</p>
+    </div>
+    <div class="foot"><span><b>ODIN.lk</b> &middot; Company Portfolio</span><span>02</span></div>
+</section>
+
+<!-- 3. Services -->
+<section class="page">
+    <div class="kicker">Our services</div>
+    <h2>Everything your business needs, <span class="accent">under one roof</span></h2>
+    <p class="lead">Choose a single service or combine them &mdash; our solutions are built to work together.</p>
+    <div class="svc-grid">
+        <div class="svc">
+            <h3>1. Website Development</h3>
+            <div class="tag">Fast, modern websites that bring you customers</div>
+            <ul><li>Business websites</li><li>Corporate websites</li><li>E-commerce websites</li><li>Hotel / restaurant websites</li><li>Portfolio websites</li><li>Landing pages</li><li>Website redesign</li><li>Website maintenance</li><li>Custom software</li></ul>
+            <div class="price">From Rs. 25,000</div>
+        </div>
+        <div class="svc">
+            <h3>2. ERP Software</h3>
+            <div class="tag">Run your whole business from one system</div>
+            <ul><li>Sales management</li><li>Inventory management</li><li>Purchasing</li><li>Accounting</li><li>HR &amp; payroll</li><li>Customer management</li><li>Supplier management</li><li>Reports &amp; dashboards</li><li>Multi-branch management</li></ul>
+            <div class="price">Modules from Rs. 45,000</div>
+        </div>
+        <div class="svc">
+            <h3>3. Business Management Systems</h3>
+            <div class="tag">Ready-made systems for everyday operations</div>
+            <ul><li>Inventory systems</li><li>HR management</li><li>Payroll systems</li><li>CRM systems</li><li>Accounting systems</li><li>Attendance systems</li><li>Booking / reservation systems</li></ul>
+            <div class="price">From Rs. 40,000</div>
+        </div>
+        <div class="svc">
+            <h3>4. Installation &amp; Maintenance</h3>
+            <div class="tag">Friendly technical support for your office</div>
+            <ul><li>Software installation</li><li>User / account setup</li><li>Software updates</li><li>Backup &amp; recovery</li><li>On-site &amp; remote support</li><li>Monthly maintenance plans</li></ul>
+            <div class="price">From Rs. 2,000 per device</div>
+        </div>
+    </div>
+    <div class="foot"><span><b>ODIN.lk</b> &middot; Company Portfolio</span><span>03</span></div>
+</section>
+
+<!-- 4. Projects -->
+<section class="page">
+    <div class="kicker">Selected work</div>
+    <h2>Projects we're <span class="accent">proud of</span></h2>
+    <p class="lead">A few examples of what we have built for businesses around Sri Lanka. (Sample projects &mdash; replace with your real case studies.)</p>
+    <div class="projects">
+        <div class="project"><div class="shot" style="--c1:#e10600;--c2:#7a0008"></div><div class="body"><div class="type">E-commerce website</div><h4>Lanka Hardware Mart, Kandy</h4><p>Online store with 2,000+ products, cash on delivery and WhatsApp ordering.</p><div class="result">&uarr; 3&times; more orders in 6 months</div></div></div>
+        <div class="project"><div class="shot" style="--c1:#0a3d91;--c2:#061a44"></div><div class="body"><div class="type">ERP software</div><h4>Ceylon Traders (Pvt) Ltd, Colombo</h4><p>Sales, inventory, purchasing and accounting for 3 branches in one system.</p><div class="result">Month-end closing: 5 days &rarr; 1 day</div></div></div>
+        <div class="project"><div class="shot" style="--c1:#0891b2;--c2:#0a3d91"></div><div class="body"><div class="type">Hotel website &amp; booking</div><h4>Blue Lagoon Beach Hotel, Negombo</h4><p>Room galleries, online reservations and advance payments.</p><div class="result">40% of bookings now direct</div></div></div>
+        <div class="project"><div class="shot" style="--c1:#16a34a;--c2:#065f46"></div><div class="body"><div class="type">Inventory &amp; POS</div><h4>Green Leaf Pharmacy, Galle</h4><p>Barcode billing, expiry tracking and low-stock alerts.</p><div class="result">Stock losses cut by 60%</div></div></div>
+        <div class="project"><div class="shot" style="--c1:#7c3aed;--c2:#312e81"></div><div class="body"><div class="type">Attendance system</div><h4>Kandy Tuition Academy</h4><p>Fingerprint attendance with SMS alerts to parents.</p><div class="result">1,200 students tracked daily</div></div></div>
+        <div class="project"><div class="shot" style="--c1:#f59e0b;--c2:#b45309"></div><div class="body"><div class="type">HR &amp; payroll</div><h4>Sunrise Garments, Katunayake</h4><p>Payroll with overtime, EPF / ETF and bank transfer files for 350 staff.</p><div class="result">Payroll in 2 hours instead of 3 days</div></div></div>
+    </div>
+    <div class="foot"><span><b>ODIN.lk</b> &middot; Company Portfolio</span><span>04</span></div>
+</section>
+
+<!-- 5. Process -->
+<section class="page">
+    <div class="kicker">How we work</div>
+    <h2>A simple, <span class="accent">transparent</span> process</h2>
+    <p class="lead">No confusing technical jargon &mdash; just clear steps from idea to a working solution.</p>
+    <div class="steps">
+        <div class="step"><b>01</b><h4>Talk to us</h4><p>Free consultation to understand your business and goals.</p></div>
+        <div class="step"><b>02</b><h4>Plan &amp; quote</h4><p>We recommend the right solution with a fixed price and timeline.</p></div>
+        <div class="step"><b>03</b><h4>Build &amp; set up</h4><p>We design, develop, install and test &mdash; and train your staff.</p></div>
+        <div class="step"><b>04</b><h4>Support</h4><p>Maintenance, updates, backups and help whenever you need it.</p></div>
+    </div>
+    <h3 style="font-size: 15pt; margin-bottom: 3mm">Why businesses choose Odin</h3>
+    <ul class="why">
+        <li>Free consultation and honest advice</li>
+        <li>Fixed quotations with no hidden costs</li>
+        <li>Mobile-friendly, fast and secure solutions</li>
+        <li>Sinhala, Tamil and English support</li>
+        <li>On-site visits across Sri Lanka</li>
+        <li>Training for your staff included</li>
+        <li>Affordable monthly maintenance plans</li>
+        <li>Genuine software and hardware from our store</li>
+    </ul>
+    <h3 style="font-size: 15pt; margin-bottom: 1mm">Technologies we use</h3>
+    <div class="tech"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Vue.js</span><span>Bootstrap</span><span>WordPress</span><span>Flutter</span><span>Microsoft 365</span><span>Google Workspace</span><span>Cloud backups</span><span>Payment gateways</span></div>
+    <div class="foot"><span><b>ODIN.lk</b> &middot; Company Portfolio</span><span>05</span></div>
+</section>
+
+<!-- 6. Contact -->
+<section class="page contact">
+    <div class="ring"></div>
+    <div style="position: relative">
+        <div class="logo" style="margin-bottom: 14mm"><div class="mark"></div><div><div class="word" style="color: #fff">ODIN<span>.lk</span></div><small>TECHNOLOGY STORE &amp; IT SERVICES</small></div></div>
+        <div class="kicker" style="color: #ff9d9a">Let's work together</div>
+        <h2>Ready to start your project?</h2>
+        <p class="lead">Tell us what you need and get a free, no-obligation quotation within one working day.</p>
+        <div class="cards">
+            <div class="card"><span>Hotline</span><b>011 234 5678</b></div>
+            <div class="card"><span>WhatsApp</span><b>077 123 4567</b></div>
+            <div class="card"><span>Email</span><b>support@odin.lk</b></div>
+            <div class="card"><span>Visit us</span><b>No. 125, Galle Road, Colombo 03</b></div>
+        </div>
+        <span class="cta">Request a quote at www.odin.lk/services</span>
+    </div>
+    <div class="foot"><span>&copy; 2026 Odin.lk &middot; Sample portfolio &mdash; replace with your own</span><span>06</span></div>
+</section>
+
+</body>
+</html>
