@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f3e9ea"/></radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a3d91"/><stop offset="1" stop-color="#05214f"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef1f5"/><stop offset="1" stop-color="#b6bec9"/></linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b404c"/><stop offset="1" stop-color="#14161b"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a3d91"/><stop offset=".55" stop-color="#0b1a3a"/><stop offset="1" stop-color="#050608"/></linearGradient>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="2.6" fill="#000" opacity=".35"/></pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <ellipse cx="400" cy="655" rx="270" ry="26" fill="#0b0b0f" opacity=".10"/>
+  <g transform="translate(400 420) scale(0.86) translate(-400 -420)"><g transform="rotate(-12 330 400)">
+  <rect x="195" y="145" width="260" height="510" rx="44" fill="url(#accent)"/>
+  <rect x="195" y="145" width="260" height="510" rx="44" fill="#fff" opacity=".1"/>
+  <path d="M195 420 L455 300 L455 360 L195 480 Z" fill="#fff" opacity=".06"/>
+  <rect x="218" y="170" width="128" height="128" rx="32" fill="#000" opacity=".25"/><circle cx="252" cy="204" r="23" fill="#0b0d12" stroke="#3b404c" stroke-width="6"/><circle cx="246" cy="198" r="6" fill="#3b5b8f" opacity=".8"/><circle cx="252" cy="264" r="23" fill="#0b0d12" stroke="#3b404c" stroke-width="6"/><circle cx="246" cy="258" r="6" fill="#3b5b8f" opacity=".8"/><circle cx="310" cy="234" r="23" fill="#0b0d12" stroke="#3b404c" stroke-width="6"/><circle cx="304" cy="228" r="6" fill="#3b5b8f" opacity=".8"/><circle cx="312" cy="190" r="8" fill="#f3f4f6"/>
+</g>
+<rect x="355" y="160" width="260" height="510" rx="44" fill="#15171c"/>
+<rect x="367" y="172" width="236" height="486" rx="34" fill="url(#screen)"/>
+<path d="M367 480 C 430 425, 520 530, 603 455 L603 624 Q603 658 569 658 L401 658 Q367 658 367 624 Z" fill="#fff" opacity=".08"/>
+<path d="M367 385 C 440 335, 520 440, 603 365" stroke="#0a3d91" stroke-width="5" fill="none" opacity=".85"/>
+<rect x="452" y="190" width="66" height="18" rx="9" fill="#050608"/>
+<rect x="615" y="270" width="6" height="64" rx="3" fill="#2a2e36"/>
+<rect x="615" y="350" width="6" height="40" rx="3" fill="#2a2e36"/></g>
+  <text x="48" y="762" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="#0b0b0f" opacity=".82" letter-spacing="2">XIAOMI</text>
+  <text x="752" y="760" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#8a929c" letter-spacing="1">SAMPLE IMAGE · odin.lk</text>
+</svg>

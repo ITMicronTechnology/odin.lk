@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9eef5"/></radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset="1" stop-color="#0f2a76"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef1f5"/><stop offset="1" stop-color="#b6bec9"/></linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b404c"/><stop offset="1" stop-color="#14161b"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset=".55" stop-color="#0b1a3a"/><stop offset="1" stop-color="#050608"/></linearGradient>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="2.6" fill="#000" opacity=".35"/></pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <ellipse cx="400" cy="655" rx="270" ry="26" fill="#0b0b0f" opacity=".10"/>
+  <g transform=""><rect x="295" y="135" width="210" height="530" rx="62" fill="url(#dark)"/>
+<rect x="295" y="135" width="210" height="530" rx="62" fill="url(#accent)" opacity=".18"/>
+<rect x="370" y="160" width="60" height="8" rx="4" fill="#0b0d12"/>
+<rect x="322" y="188" width="156" height="136" rx="10" fill="url(#screen)"/>
+<text x="400" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="34" fill="#fff">12:30</text>
+<rect x="348" y="342" width="104" height="48" rx="24" fill="#2a2e36"/>
+<circle cx="400" cy="366" r="13" fill="#1d4ed8"/>
+<rect x="318" y="356" width="24" height="20" rx="6" fill="#22c55e" opacity=".85"/>
+<rect x="458" y="356" width="24" height="20" rx="6" fill="#ef4444" opacity=".85"/>
+<rect x="328" y="412" width="40" height="30" rx="9" fill="#2c313b"/><rect x="380" y="412" width="40" height="30" rx="9" fill="#2c313b"/><rect x="432" y="412" width="40" height="30" rx="9" fill="#2c313b"/><rect x="328" y="456" width="40" height="30" rx="9" fill="#2c313b"/><rect x="380" y="456" width="40" height="30" rx="9" fill="#2c313b"/><rect x="432" y="456" width="40" height="30" rx="9" fill="#2c313b"/><rect x="328" y="500" width="40" height="30" rx="9" fill="#2c313b"/><rect x="380" y="500" width="40" height="30" rx="9" fill="#2c313b"/><rect x="432" y="500" width="40" height="30" rx="9" fill="#2c313b"/><rect x="328" y="544" width="40" height="30" rx="9" fill="#2c313b"/><rect x="380" y="544" width="40" height="30" rx="9" fill="#2c313b"/><rect x="432" y="544" width="40" height="30" rx="9" fill="#2c313b"/></g>
+  <text x="48" y="762" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="#0b0b0f" opacity=".82" letter-spacing="2">NOKIA</text>
+  <text x="752" y="760" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="#8a929c" letter-spacing="1">SAMPLE IMAGE · odin.lk</text>
+</svg>

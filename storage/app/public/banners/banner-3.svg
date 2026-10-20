@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffffff"/></radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#8c8c8c"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef1f5"/><stop offset="1" stop-color="#b6bec9"/></linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b404c"/><stop offset="1" stop-color="#14161b"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#0b1a3a"/><stop offset="1" stop-color="#050608"/></linearGradient>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="2.6" fill="#000" opacity=".35"/></pattern>
+  </defs>
+  <linearGradient id="banner" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a0008"/><stop offset="1" stop-color="#e10600"/></linearGradient>
+  <rect width="800" height="300" fill="url(#banner)"/>
+  <path d="M800 0 L800 300 L400 300 Z" fill="#fff" opacity=".04"/>
+  <rect x="0" y="290" width="800" height="10" fill="#e10600"/>
+  <text x="48" y="100" font-family="Arial Black, Arial, sans-serif" font-size="40" font-weight="900" fill="#fff">Power Banks</text>
+  <text x="48" y="145" font-family="Arial, sans-serif" font-size="26" fill="#fff" opacity=".85">Starting from Rs. 5,490</text>
+  <rect x="48" y="185" width="190" height="56" rx="28" fill="#fff"/>
+  <text x="143" y="221" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="22" fill="#0b0b0f">SHOP NOW</text>
+  <g transform="translate(500 -6) scale(0.40)"><path d="M430 182 C 430 100 610 110 610 220 V 430" stroke="#e5e7eb" stroke-width="14" fill="none" stroke-linecap="round"/>
+<rect x="594" y="420" width="32" height="70" rx="8" fill="#9aa3ae"/>
+<rect x="260" y="180" width="280" height="450" rx="38" fill="url(#dark)"/>
+<rect x="260" y="180" width="280" height="450" rx="38" fill="url(#accent)" opacity=".22"/>
+<rect x="320" y="240" width="160" height="80" rx="12" fill="#0b0d12"/>
+<text x="400" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="38" fill="#ffffff">100%</text>
+<circle cx="340" cy="570" r="9" fill="#ffffff"/><circle cx="373" cy="570" r="9" fill="#ffffff"/><circle cx="406" cy="570" r="9" fill="#ffffff"/><circle cx="439" cy="570" r="9" fill="#4b5563"/>
+<rect x="320" y="172" width="44" height="12" rx="4" fill="#111"/><rect x="410" y="172" width="40" height="12" rx="4" fill="#111"/></g>
+</svg>
